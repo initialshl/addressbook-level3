@@ -48,6 +48,7 @@ Priority | As a ... | I want to ... | So that I can...
 `* * *` | user | find a person by phone | locate persons by phone number without having to go through the entire list
 `* * *` | user | find a person by address| locate persons who live in address without having to go through the entire list
 `* * *` | user | edit a person | update details of persons easily
+`* * *` | user | edit tag | update tag of persons easily
 `* *` | user | hide [private contact details](#private-contact-detail) by default | to minimize chance of someone else seeing them by accident
 `*` | user with many persons in the address book | sort persons by name | locate a person easily
 
@@ -76,6 +77,33 @@ Use case ends.
 
 > 3a1. AddressBook shows an error message <br>
   Use case resumes at step 2
+
+#### Use case: Edit tag
+
+**MSS**
+
+1. User requests to edit tag
+2. AddressBook shows a list of tags
+3. User requests to edit a specific tag in the list
+4. AddressBook asks for User's confirmation
+5. User accepts the confirmation
+6. AddressBook deletes the person <br>
+Use case ends.
+
+**Extensions**
+
+2a. The list is empty
+
+> Use case ends
+
+3a. The given index is invalid
+
+> 3a1. AddressBook shows an error message <br>
+  Use case resumes at step 2
+
+5a. User denies the confirmation
+
+> Use case resumes at step 2
 
 ## Appendix C : Non Functional Requirements
 
