@@ -12,7 +12,9 @@ import seedu.addressbook.data.AddressBook;
 import seedu.addressbook.data.person.*;
 import seedu.addressbook.data.tag.Tag;
 import seedu.addressbook.data.tag.UniqueTagList;
+import seedu.addressbook.storage.Storage;
 import seedu.addressbook.storage.StorageFile;
+import seedu.addressbook.storage.StorageFile.StorageOperationException;
 
 import java.util.*;
 
@@ -586,6 +588,31 @@ public class LogicTest {
                     new UniqueTagList(new Tag("tag"))
             );
         }
+    }
+    
+    /**
+     * A utility class to generate test data.
+     */
+    class StorageStub extends Storage {
+
+        @Override
+        public AddressBook load() throws StorageOperationException {
+            // TODO Auto-generated method stub
+            return null;
+        }
+
+        @Override
+        public String getPath() {
+            // TODO Auto-generated method stub
+            return null;
+        }
+
+        @Override
+        public void save(AddressBook addressBook) throws StorageOperationException {
+            // TODO Auto-generated method stub
+            
+        }
+        
     }
 
 }
